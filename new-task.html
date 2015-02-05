@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="css/introHCI.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+
+
+
+  <nav id="main-nav" class="navigation overflow">
+    <ul>
+  	 <li> <a href="">Daily Exercises </a> </li>
+  	 <li> <a href="">Reflections </a> </li>
+  	 <li> <a href="">Mood Levels </a> </li>
+  	 <li> <a href="">Journal Entry </a> </li>
+  	 <li> <a href="">Settings </a> </li>
+    </ul>
+  </nav>
+
+
+  <div id="container">
+    <header class="primary">
+      <span class="open icon">&#9776;</span>
+      <hgroup><h1>Adding new Task</h1></hgroup>
+  </header>
+
+  <section id="scroller" class="overflow">
+  <form id="projectForm" role="form">
+    <div class="form-group">
+      <label for="Name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Task name">
+    </div>
+
+    <div class="form-group">
+      <label for="project">Priority</label>
+      <select class="form-control" id="project">
+        <option value="#project1">Do not worry! You have time to finish it!</option>
+        <option value="#project2">This task is important. Do you have time to get it done?</option>
+        <option value="#project3">It is very urgent! you need to finish it now!</option>
+
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="width">Date to accomplish</label>
+      <input type="date" class="form-control" id="width" placeholder="Width">
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <input type="text" class="form-control" id="description" placeholder="Project desicription">
+    </div>
+    <button id="submitBtn" type="button" class="btn btn-default">Submit</button>
+    <button id="cancelBtn" type="button" class="btn btn-default">Cancel</button>
+  </form>
+
+  
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/introHCI.js"></script>
+  </section>
+
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+<script src="js/bamboo.0.1.js"></script>
+
+<script>
+  var site = new Bamboo ({
+  menu: true,
+  breakpoint: 768,
+  menuWidth: 265,
+  headerHeight: 50,
+  resize: function(){
+    // function to call on page resize/orientation change
+  }
+});
+</script>
+</body>
+
+</html>
