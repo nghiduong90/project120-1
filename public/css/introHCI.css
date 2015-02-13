@@ -1,0 +1,32 @@
+/* task element */
+
+h2 {
+     display: inline;
+     color: #32812b;
+     padding-right: 10px;
+}
+h3{
+     display: inline;
+     color: #19334c;
+     padding-left: 10px;
+}
+
+.task_date h3{
+     display: inline;
+     color: #19334c;
+     padding-left: 10px;     
+}
+
+.task_priority h3{
+      display: inline;
+     color: #19334c;   
+     padding-left: 10px; 
+}
+
+.task_description h3{
+     display: inline;
+     color: #19334c;     
+     padding-left: 10px;
+}
+
+
