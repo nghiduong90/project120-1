@@ -3,36 +3,42 @@
 		{
 			"name": "creating about page",
 			"date": "2/9/2015",
-			"priority": "This task is important. Do you have time to get it done?",
+			"panel": "panel panel-green",
+			"priority": "Do not worry! You have time to finish it!",
 			"description": "fhksdjfsdf sdfjksdnfkhsadlkfjadsf asfsdfhklsdjfhk skhfsdf"
 		},
 		{
 			"name": "re-struture 120 project",
 			"date": "2/8/2015",
-			"priority": "This task is important. Do you have time to get it done?",
+			"panel": "panel panel-green",
+			"priority": "Do not worry! You have time to finish it!",
 			"description": "eqwuejfalkdsnfsdbfsdofiwenf sdjfsdnfnksjdfkj s"
 		},
 		{
 			"name": "create json file and test with fake data",
 			"date": "2/10/2015",
-			"priority": "Do not worry! You have time to finish it!",
+			"panel": "panel panel-yellow",
+			"priority": "This task is important. Do you have time to get it done?",
 			"description": "Nghi Duong Anh"
 		},
 		{
 			"name": "Complete assignment 6",
 			"date": "2/11/2015",
+			"panel": "panel panel-yellow",
 			"priority": "This task is important. Do you have time to get it done?",
 			"description": "hahhahhaa heheehheeheheheh"
 		},
 		{
 			"name": "Midterm this week",
 			"date": "2/11/2015",
+			"panel": "panel panel-red",
 			"priority": "It is very urgent! you need to finish it now!",
 			"description": "okay, we will take it down"
 		},
 		{
 			"name": "repair laptop",
 			"date": "2/7/2015",
+			"panel": "panel panel-red",
 			"priority": "It is very urgent! you need to finish it now!",
 			"description": "Can you live without your pal?"
 		}
