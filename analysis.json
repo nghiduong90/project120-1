@@ -1,0 +1,15 @@
+{
+	"analysis": [
+	{
+		"stressMsg" : "",
+		"stressMsg2" : "",
+		"stressedAlert" : "",
+		"productiveMsg" : "",
+		"productiveMsg2" : "",
+		"productiveAlert" : "",
+		"feelingMsg" :  "",
+		"feelingMsg2" : "",
+		"feelingAlert" :""
+	}
+	]
+}

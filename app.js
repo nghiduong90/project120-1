@@ -22,6 +22,8 @@ var forgotpwd = require('./routes/forgotpassword');
 var signout = require ('./routes/signout');
 var help = require ('./routes/help');
 var analysis = require ('./routes/analysis');
+var analyzed = require ('./routes/analyzed');
+//var analyzed = require ('./public/js/plugins/morris/morris-data.js');
 
 var app = express();
 
@@ -60,7 +62,7 @@ app.get('/forgotpassword', forgotpwd.forgotpassword);
 app.get('/signinpage', signout.signout);
 app.get('/help', help.getHelp);
 app.get('/analysis', analysis.getAnalysis);
-
+app.get('/analyzed', analyzed.analyze);
 
 // Example route
 // app.get('/users', user.list);

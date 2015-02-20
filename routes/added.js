@@ -12,10 +12,10 @@ exports.add = function(req, res) {
 
 	switch (p1) {
     case "Do not worry! You have time to finish it!":
-        p2 = "panel panel-green";
+        p2 = "panel panel-primary";
         break;
     case "This task is important. Do you have time to get it done?":
-        p2 = "panel panel-yellow";
+        p2 = "panel panel-green";
         break;
     case "It is very urgent! you need to finish it now!":
         p2 = "panel panel-red";

@@ -47,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Be Chilled</a>
+                <a class="navbar-brand" href="/">Be Chilled</a>
             </div>
 
 
@@ -58,36 +58,7 @@
 
 
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Important <span class="label label-default">Task 1 gsdfgsdfgdsfgsdfgsdfgdfgsdf</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Important <span class="label label-primary">Task 2</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Important <span class="label label-success">Task 3</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Important <span class="label label-info">Task 4</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Important <span class="label label-warning">Task 5</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Important <span class="label label-danger">Task 6</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li class="dropdown">
+                <li class="dropdown" style="float: right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Team Chill Out <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
@@ -152,108 +123,72 @@
                 <div class="row">
                     <div class="col-lg-6">
 
-                            <form role="form">
+                            <form id="exerciseForm" role="form" method="get" action="/analyzed">
 
                                 <div class="form-group">
-                                    <label>How did you feel while completing the task?</label>
+                                    <label>How stressed are you feeling right now?</label>
                                     <div class="radio">
-                                       <label>
-                                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Happy
-                                      </label>
-                                     </div>
-                                     <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Stressed
+                                        <label class="radio-inline">
+                                            <input type="radio" name="stressed" id="optionsRadiosInline1" value="1" checked>1 (Lowest)
                                         </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">No Feeling
+                                        <label class="radio-inline">
+                                            <input type="radio" name="stressed" id="optionsRadiosInline2" value="2">2
                                         </label>
-                                    </div>
-                                </div>
-                                
+                                        <label class="radio-inline">
+                                            <input type="radio" name="stressed" id="optionsRadiosInline3" value="3">3
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="stressed" id="optionsRadiosInline1" value="4">4
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="stressed" id="optionsRadiosInline1" value="5">5 (Highest)
+                                        </label>
 
-
-                                <div class="form-group">
-                                    <label>How did you feel while completing the task?</label>
-                                    <div class="radio">
-                                       <label>
-                                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Happy
-                                      </label>
-                                     </div>
-                                     <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Stressed
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">No Feeling
-                                        </label>
                                     </div>
                                 </div>
 
-
-
                                 <div class="form-group">
-                                    <label>How did you feel while completing the task?</label>
+                                    <label>How productive were you today?</label>
                                     <div class="radio">
-                                       <label>
-                                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Happy
-                                      </label>
-                                     </div>
-                                     <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Stressed
+                                        <label class="radio-inline">
+                                            <input type="radio" name="productive" id="optionsRadiosInline1" value="1" checked>1 (Lowest)
                                         </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">No Feeling
+                                        <label class="radio-inline">
+                                            <input type="radio" name="productive" id="optionsRadiosInline2" value="2">2
                                         </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="productive" id="optionsRadiosInline3" value="3">3
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="productive" id="optionsRadiosInline1" value="5">4
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="productive" id="optionsRadiosInline1" value="5">5 (Highest)
+                                        </label>
+
                                     </div>
                                 </div>
 
-
-
                                 <div class="form-group">
-                                    <label>How did you feel while completing the task?</label>
+                                    <label>How do you feel right now?</label>
                                     <div class="radio">
-                                       <label>
-                                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Happy
-                                      </label>
-                                     </div>
-                                     <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Stressed
+                                        <label class="radio-inline">
+                                            <input type="radio" name="feeling" id="optionsRadiosInline1" value="1" checked>1 (Very Sad)
                                         </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">No Feeling
+                                        <label class="radio-inline">
+                                            <input type="radio" name="feeling" id="optionsRadiosInline2" value="2">2
                                         </label>
-                                    </div>
-                                </div>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="feeling" id="optionsRadiosInline3" value="3">3
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="feeling" id="optionsRadiosInline1" value="4">4
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="feeling" id="optionsRadiosInline1" value="5">5 (Very Happy)
+                                        </label>
 
 
-
-                                <div class="form-group">
-                                    <label>How did you feel while completing the task?</label>
-                                    <div class="radio">
-                                       <label>
-                                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Happy
-                                      </label>
-                                     </div>
-                                     <div class="radio">
-                                        <label>
-                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Stressed
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">No Feeling
-                                        </label>
                                     </div>
                                 </div>
 
@@ -265,7 +200,7 @@
                             </form>
                         <!-- col-lg-6  -->
                         </div>
-
+                        <br><br><br><br><br><br><br><br>
                 
 
 
