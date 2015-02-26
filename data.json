@@ -1,5 +1,4 @@
-{
-	"tasks": [
+[
 		{
 			"name": "creating about page",
 			"date": "2/9/2015",
@@ -42,5 +41,4 @@
 			"priority": "It is very urgent! you need to finish it now!",
 			"description": "Can you live without your pal?"
 		}
-	]
-}
+]
