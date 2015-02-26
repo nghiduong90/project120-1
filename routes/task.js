@@ -49,18 +49,22 @@ exports.addTask = function(req, res) {
 
 	var p1 = form_data['priority'];
 	var p2;
+  var p3;
 	console.log(p1);
 	console.log("from add.js");
 
 	switch (p1) {
     case "Do not worry! You have time to finish it!":
-        p2 = "panel panel-primary";
+        p2 = "panel panel-green";
+        p3 = "img/task-1.jpg";
         break;
     case "This task is important. Do you have time to get it done?":
-        p2 = "panel panel-green";
+        p2 = "panel panel-yellow";
+        p3 = "img/task-2.jpg";
         break;
     case "It is very urgent! you need to finish it now!":
         p2 = "panel panel-red";
+        p3 = "img/task-3.jpg";
         break;
 
 	}
@@ -79,6 +83,7 @@ exports.addTask = function(req, res) {
   	"date": form_data['date'],
   	"panel" : p2,
   	"priority": form_data['priority'],
+    "img" : p3,
   	"description": form_data['description']
   });
 

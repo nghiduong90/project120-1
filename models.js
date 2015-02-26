@@ -7,6 +7,7 @@ var taskSchema = new Mongoose.Schema({
   "name": String,
   "date": Date,
   "panel": String,
+  "img": String,
   "priority": String,
   "description": String
 });

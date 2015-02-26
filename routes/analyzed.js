@@ -7,12 +7,38 @@ exports.analyze = function(req, res) {
 	// Your code goes here
 	res.render('analyzed');
 
-	var feelingLevel = req.query.feeling;
-	var stressedLevel = req.query.stressed;
-	var productiveLevel = req.query.productive;
+	var feelingLevel = parseInt(req.query.feeling);
+	var stressedLevel = parseInt(req.query.stressed);
+	var productiveLevel = parseInt(req.query.productive);
 	var sa,s1,s2;
 	var pa,p2, p1;
 	var fa, f1, f2;
+	var total = feelingLevel + stressedLevel + productiveLevel;
+
+	console.log ("total = " + total);
+
+	if (total > 0 && total <= 5) {
+		analysis["analysis"][0].alertBox = "alert-danger";
+		analysis["analysis"][0].img = "img/p120-1.jpg";
+		console.log ("if 1");
+	} 
+	else if (total > 5 && total <= 10) {
+		analysis["analysis"][0].alertBox = "alert-info";
+		analysis["analysis"][0].img = "img/p120-2.jpg";
+		console.log ("if 2");
+	}
+	 else if (total > 10 && total <= 15) {
+		analysis["analysis"][0].alertBox = "alert-success";
+		analysis["analysis"][0].img = "img/p120-3.jpg";
+		console.log ("if 3");
+	} 
+
+	console.log("after total if statement in analyzed.js: ");
+
+	console.log("alertBox " + analysis["analysis"][0].alertBox);
+	console.log ("pic " + analysis["analysis"][0].img);
+
+
 
 	console.log("stressed level:");
 	console.log (req.query.stressed);
@@ -27,34 +53,34 @@ exports.analyze = function(req, res) {
 	if (stressedLevel < 3) {
 		analysis["analysis"][0].stressMsg = "You are not stressed!";
 		analysis["analysis"][0].stressMsg2 = "That is good. Keep going with this!";
-		analysis["analysis"][0].stressedAlert = "alert-success";
+		//analysis["analysis"][0].stressedAlert = "alert-success";
 	}
 	else if (stressedLevel >= 3) {
 		analysis["analysis"][0].stressMsg = "You are stressed! ";
 		analysis["analysis"][0].stressMsg2 = "Do not worry too much because things will be good when you put on effort";
-		analysis["analysis"][0].stressedAlert = "alert-danger";
+		//analysis["analysis"][0].stressedAlert = "alert-danger";
 	}
 
 	if (productiveLevel < 3) {
 		analysis["analysis"][0].productiveMsg = "Not very productive!";
 		analysis["analysis"][0].productiveMsg2 = "It looks like you have an easy day!";
-		analysis["analysis"][0].productiveAlert = "alert-info";
+		//analysis["analysis"][0].productiveAlert = "alert-info";
 	}
 	else if (productiveLevel >= 3) {
 		analysis["analysis"][0].productiveMsg = "Good work!";
 		analysis["analysis"][0].productiveMsg2 = "You are doing a good job!";
-		analysis["analysis"][0].productiveAlert = "alert-success";;
+		//analysis["analysis"][0].productiveAlert = "alert-success";;
 	}
 
 	if (feelingLevel >= 3) {
 		analysis["analysis"][0].feelingMsg = "You are having good feeling!";
 		analysis["analysis"][0].feelingMsg2 = "";
-		analysis["analysis"][0].feelingAlert = "alert-success";
+		//analysis["analysis"][0].feelingAlert = "alert-success";
 	}
 	else if (feelingLevel < 3) {
 		analysis["analysis"][0].feelingMsg = "Cheer up now!";
 		analysis["analysis"][0].feelingMsg2 = "Your feeling is not very well but it is okay!";
-		analysis["analysis"][0].feelingAlert = "alert-danger";
+		//analysis["analysis"][0].feelingAlert = "alert-danger";
 	}
 
 
@@ -85,6 +111,7 @@ exports.analyze = function(req, res) {
 */
 
 	console.log("New analysis added:");
+	console.log (analysis);
 
 //	console.log(newAnalysis);
 	//analysis["analysis"].push(newAnalysis);

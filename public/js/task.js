@@ -32,15 +32,28 @@ function initializePage() {
 		function addTaskDetails (data_json) {
 			console.log ("in addTaskDetails function");
 
+			var date_obj = new Date(data_json['date']);
+			var options = {
+				weekday: "long",
+				year: "numeric",
+				month: "long",
+				day: "numeric"
+			};
+			var display_date = date_obj.toLocaleDateString('en-US', options);
+
 			var details_div = $('#task' + idNumber + ' .details');
-			
+			console.log ("img in task.js " + data_json['img']);
 			var new_html = //'<p> print something in html  </p>'; 
 
 					'<div class="panel-footer">' +
+					'<span class="pull-left"><b>Date</b>:' + display_date + '</span>' +
 	                '<span class="pull-left"><b>Description</b>:' + data_json['description'] + '</span>' +
+	                //'<span class="pull-left">' + data_json['img'] + '</span>' +
+	                '<img class="img-thumbnail" src="' + data_json['img'] + '" alt="task">' +
+	                '<p class="tex-center">' + data_json['priority'] + '</p>' +
 	                '<div class="clearfix"></div>' +
 	                '<button class="project-delete btn btn-default" '+
-						'type="button">delete</button>'
+						'type="button" style="float: right">delete</button> <br> <br>' + 
 	                '</div>';   
 					//'<div class="project-summary">'+project_json['summary']+'</div>'+
 

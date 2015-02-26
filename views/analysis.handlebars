@@ -89,11 +89,11 @@
                                 <a href="/task"><i class="fa fa-fw fa-bar-chart-o"></i> Add a new task</a>
                             </li>
                             <li>
-                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> Exercises</a>
+                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> How Is Your Mood?</a>
                             </li>
-                            <li class="active">
+                       <!--     <li class="active">
                                 <a href="/analysis"><i class="fa fa-fw fa-edit"></i> Analysis</a>
-                            </li>
+                            </li>    -->
                             <li>
                                 <a href="/about"><i class="fa fa-fw fa-desktop"></i> About</a>
                             </li>
@@ -119,11 +119,18 @@
 
                     {{#each analysis}}
 
-                    <div class="alert {{stressedAlert}}">
+                    <div class="alert {{alertBox}}">
                         <strong>{{stressMsg}}</strong> {{stressMsg2}}
+                        <br>
+                        <strong>{{productiveMsg}}</strong> {{productiveMsg2}}
+                        <br>
+                        <strong>{{feelingMsg}}</strong> {{feelingMsg2}}
+                        <br>
+                        <img class="img-thumbnail" src="{{img}}" alt="analysis">
+                        <br>
                     </div>
 
-                    <br>
+                <!--    <br>
 
 
                     <div class="alert {{productiveAlert}}">
@@ -137,7 +144,7 @@
                         <strong>{{feelingMsg}}</strong> {{feelingMsg2}}
                     </div>
 
-                    <br>
+                    <br>      -->
 
                     {{/each}}
 
@@ -161,7 +168,7 @@
   
                 <!-- /.row -->
 
-                <div class="row">
+        <!--        <div class="row">
                     <div class="col-lg-4">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
@@ -174,7 +181,7 @@
                     </div>
 
                     
-                </div>
+                </div>     -->
 
       
                 <!-- main code goes here-->
