@@ -9,11 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Team Chill Out | Intro HCI</title>
+    <title>Team Chill Out</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
@@ -50,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Be Chilled</a>
+                <a class="navbar-brand"  href="/" >Be Chilled</a>
             </div>
 
 
@@ -60,11 +59,10 @@
 
 
 
-
-
-                <li class="dropdown" style="float: right">
+                <li class="dropdown" style="float:right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Team Chill Out <b class="caret"></b></a>
                     <ul class="dropdown-menu">
+                        <li>
                   <!--      <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a>
                         </li>
@@ -82,18 +80,21 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                            <li>
+                            <li class="active">
                                 <a href="/"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                             </li>
                             <li>
                                 <a href="/task"><i class="fa fa-fw fa-bar-chart-o"></i> Add a new task</a>
                             </li>
-                            <li>
-                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> Reflection</a>
+                            <li class="active">
+                                <a href="/history"><i class="fa fa-fw fa-dashboard"></i> Your Task History</a>
                             </li>
-                       <!--     <li class="active">
+                            <li>
+                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> How Is Your Mood?</a>
+                            </li>
+                 <!--           <li>
                                 <a href="/analysis"><i class="fa fa-fw fa-edit"></i> Analysis</a>
-                            </li>    -->
+                            </li>     -->
                             <li>
                                 <a href="/about"><i class="fa fa-fw fa-desktop"></i> About</a>
                             </li>
@@ -107,87 +108,48 @@
             <!-- /.navbar-collapse -->
         </nav>
 
+
+
         <div id="page-wrapper">
 
             <div class="container-fluid">
 
                 <!-- Page Heading -->
-                    <h1 class="page-header">
-                            <!-- heading goes here-->
-                        Analysis    
-                    </h1>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Your Task History <small>View By Date</small>
+                            <input class="btn btn-default" type="button"  onClick="parent.location='/task' "value="New Task" style="float: right;">
+                        </h1>
 
-                    {{#each analysis}}
-
-                    <div class="alert {{alertBox}}">
-                        <strong>{{stressMsg}}</strong> {{stressMsg2}}
-                        <br>
-                        <strong>{{productiveMsg}}</strong> {{productiveMsg2}}
-                        <br>
-                        <strong>{{feelingMsg}}</strong> {{feelingMsg2}}
-                        <br>
- <!-- put back                       <img class="img-thumbnail" src="{{img}}" alt="analysis">    -->
-                        <br>
                     </div>
+                </div>
 
-                <!--    <br>
-
-
-                    <div class="alert {{productiveAlert}}">
-                        <strong>{{productiveMsg}}</strong> {{productiveMsg2}}
-                    </div>
-
-                    <br>
-
-
-                    <div class="alert {{feelingAlert}}">
-                        <strong>{{feelingMsg}}</strong> {{feelingMsg2}}
-                    </div>
-
-                    <br>      -->
-
-                    {{/each}}
-
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <!-- Flot Charts -->
-
-                <!-- /.row -->
-
-
-                <!-- /.row -->
-
-
-                <!-- /.row -->
-
-
-                <!-- /.row -->
-
-                <!-- Morris Charts -->
-
-                <!-- /.row -->
-  
-                <!-- /.row -->
-
-        <!--        <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel panel-yellow">
+                {{#each taskHistory}}
+                <div class="task"  id="task{{id}}">
+                <div class="row">
+                    
+                        <!--div class="panel panel-green"-->
+                        <!--div class="panel panel-yellow"-->
+                        <!--div class="panel panel-red"-->
+                       <!-- <a href="#">  -->
+                        <div class="panel panel-info">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Summary Your feeling</h3>
+                                <h3 class="panel-title"><b>{{name}}</b></h3>
                             </div>
                             <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
+                                <p><b>Complete Date: </b> {{date}}</p>
+                                <p><b>Description: </b> {{description}}</p>
                             </div>
                         </div>
-                    </div>
-
-                    
-                </div>     -->
-
-      
-                <!-- main code goes here-->
+                  <!--  </a>   -->
+                
 
                 </div>
+            </div>
+                {{/each}}
                 <!-- /.row -->
+
 
             </div>
             <!-- /.container-fluid -->
@@ -204,18 +166,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script src="/js/history.js"></script>
 
-    <!-- Flot Charts JavaScript -->
-    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-    <script src="js/plugins/flot/jquery.flot.js"></script>
-    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="js/plugins/flot/flot-data.js"></script>
+    <!-- Morris Charts JavaScript -->
+
 
 </body>
 

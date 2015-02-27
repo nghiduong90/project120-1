@@ -26,6 +26,8 @@ var analysis = require ('./routes/analysis');
 var analyzed = require ('./routes/analyzed');
 
 var task = require('./routes/task');
+var history = require('./routes/history');
+var taskHistory = require('./routes/taskHistory');
 //var analyzed = require ('./public/js/plugins/morris/morris-data.js');
 
 
@@ -64,11 +66,17 @@ if ('development' == app.get('env')) {
 //app.get('/add', add.addFriend);
 // Add routes here
 //app.get('/', signinpage.signin);
-app.get('/', index.view)
+app.get('/', index.view);
+app.get('/history', history.view);
+app.get('/taskHistory/:id', taskHistory.taskHistoryInfo);
 
 app.get('/task/:id', task.taskInfo);
 app.post('/task/:id/delete', task.deleteTask);
 app.post('/task/new', task.addTask);
+app.get('/task/:id/complete', task.completeTask);
+
+//app.get('/history/:id', history.taskHistoryInfo);
+
 
 app.get('/blank-page', page.viewPage);
 app.get('/task', addTask.addTask);
