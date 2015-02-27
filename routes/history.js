@@ -12,12 +12,12 @@ exports.view = function(req, res){
 };
 */
 
-var modelHistory = require('../history');
+//var modelHistory = require('../history');
 
 /*
  * GET home page.
  */
-
+/*
 exports.view = function(req, res){
 
 	console.log ("render task History");
@@ -32,4 +32,4 @@ exports.view = function(req, res){
 		console.log (taskHistory);
 	}
 
-};
+};*/

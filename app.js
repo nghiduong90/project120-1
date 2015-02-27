@@ -68,7 +68,7 @@ if ('development' == app.get('env')) {
 //app.get('/', signinpage.signin);
 app.get('/', index.view);
 app.get('/history', history.view);
-app.get('/taskHistory/:id', taskHistory.taskHistoryInfo);
+//app.get('/taskHistory/:id', taskHistory.taskHistoryInfo);
 
 app.get('/task/:id', task.taskInfo);
 app.post('/task/:id/delete', task.deleteTask);

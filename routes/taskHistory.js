@@ -8,7 +8,7 @@ exports.addTask = function(req, res){
 };
 */
 
-var modelHistory = require('../history');
+/*var modelHistory = require('../history');
 
 exports.taskHistoryInfo = function(req, res) {
   var taskHistoryID = req.params.id;
@@ -27,7 +27,7 @@ exports.taskHistoryInfo = function(req, res) {
     res.json(taskHistory[0]);
   }
 }
-
+*/
 
 /*
 exports.deleteTask = function(req, res) {

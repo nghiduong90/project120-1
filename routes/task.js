@@ -9,7 +9,7 @@ exports.addTask = function(req, res){
 */
 
 var models = require('../models');
-var modelHistory  = require('../history');
+//var modelHistory  = require('../history');
 
 exports.taskInfo = function(req, res) {
   var taskID = req.params.id;
@@ -45,33 +45,33 @@ exports.deleteTask = function(req, res) {
 
 
 exports.completeTask = function(req, res) {
-  console.log ("completeTask body = " + req.body);
+  //console.log ("completeTask body = " + req.body);
   var taskID = req.params.id;
   var taskName = req.body.name;
   var taskDate = req.body.date;
   var taskPriority = req.body.priority;
   var taskDescription = req.body.description;
 
-  console.log ("task name = " + taskName);
-  var newTaskHistory = new modelHistory.taskHistory({
+  //console.log ("task name = " + taskName);
+  //var newTaskHistory = new modelHistory.taskHistory({
 
-    "name": taskName,
-    "date": taskDate,
-    "priority": taskPriority,
-    "description": taskDescription
-  });
+ //   "name": taskName,
+   // "date": taskDate,
+    //"priority": taskPriority,
+    //"description": taskDescription
+  //});
 
-console.log ("new history task added " + newTaskHistory);
+//console.log ("new history task added " + newTaskHistory);
 
-  newTaskHistory.save(afterSaving);
+  //newTaskHistory.save(afterSaving);
 
-  function afterSaving(err, task) {
+  /*function afterSaving(err, task) {
     if(err) {console.log(err); }
     //res.redirect('/');
     res.send('OK');
     console.log (" in afterSaving done!!!!!");
   }
-
+*/
   // find the project and remove it
   // YOU MUST send an OK response w/ res.send();
   models.task
