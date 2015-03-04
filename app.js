@@ -74,8 +74,7 @@ app.get('/task/:id', task.taskInfo);
 app.post('/task/:id/delete', task.deleteTask);
 app.post('/task/new', task.addTask);
 app.get('/task/:id/complete', task.completeTask);
-
-//app.get('/history/:id', history.taskHistoryInfo);
+//app.get('/history/:id', taskHistory.taskHistoryInfo);
 
 
 app.get('/blank-page', page.viewPage);

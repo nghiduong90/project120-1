@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/introHCI.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -129,9 +130,9 @@
                                 <div class="form-group">
                                   <label for="project">Priority</label>
                                   <select class="form-control" id="priority" placeholder="Task priority" name="priority">
-                                    <option value="Do not worry! You have time to finish it!">Do not worry! You have time to finish it!</option>
-                                    <option value="This task is important. Do you have time to get it done?">This task is important. Do you have time to get it done?</option>
-                                    <option value="It is very urgent! you need to finish it now!">It is very urgent! you need to finish it now!</option>
+                                    <option class="option1" value="Do not worry! You have time to finish it!">Do not worry! You have time to finish it!</option>
+                                    <option class="option2" value="This task is important. Do you have time to get it done?">This task is important. Do you have time to get it done?</option>
+                                    <option class="option3" value="It is very urgent! you need to finish it now!">It is very urgent! you need to finish it now!</option>
 
                                   </select>
                                 </div>
@@ -143,7 +144,7 @@
                                   <label for="description">Description:</label>
                                   <input type="text" class="form-control" id="description" placeholder="Task desicription" name="description">
                                 </div>
-                                <button id="submitBtn" type="submit" class="btn btn-default">
+                                <button id="submitBtn" type="submit" class="btn btn-success">
                                     Submit
                                 </button>
                                 <button type="reset" class="btn btn-default">Reset</button>

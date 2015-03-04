@@ -29,4 +29,19 @@ h3{
      padding-left: 10px;
 }
 
+.option1 {
+     color: #87D37C;
+     font-weight: bold;
+}
+
+
+.option2 {
+     color: #F4B350;
+     font-weight: bold;
+}
+
+.option3 {
+     color: #F22613;
+     font-weight: bold;
+}
 

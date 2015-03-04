@@ -9,7 +9,8 @@ exports.addTask = function(req, res){
 */
 
 var models = require('../models');
-//var modelHistory  = require('../history');
+var modelHistory  = require('../history');
+
 
 exports.taskInfo = function(req, res) {
   var taskID = req.params.id;
@@ -47,31 +48,46 @@ exports.deleteTask = function(req, res) {
 exports.completeTask = function(req, res) {
   //console.log ("completeTask body = " + req.body);
   var taskID = req.params.id;
-  var taskName = req.body.name;
-  var taskDate = req.body.date;
-  var taskPriority = req.body.priority;
-  var taskDescription = req.body.description;
+  var taskName;
+//  var taskDate = req.body.date;
+//  var taskPriority = req.body.priority;
+  var taskDescription;
 
-  //console.log ("task name = " + taskName);
-  //var newTaskHistory = new modelHistory.taskHistory({
+  models.task
+    .findOne({"_id":taskID}, 'name date description')
+    .exec (getInfo);
 
- //   "name": taskName,
-   // "date": taskDate,
-    //"priority": taskPriority,
-    //"description": taskDescription
-  //});
+    function getInfo (err, task) {
+      if (err) {console.log (err);}
+      console.log ("get info " + task.name + "and description = " + task.description);
+      taskName = task.name;
+      taskDescription = task.description;
 
-//console.log ("new history task added " + newTaskHistory);
+//      console.log ("taskName = " + taskName);
+//      console.log ("taskDescription = " + taskDescription);
 
-  //newTaskHistory.save(afterSaving);
+      var date = new Date();
+      var newTaskHistory = new modelHistory.taskHistory ({
+        "name" : taskName,
+        "date" : date,
+        "priority": '',
+        "description" : taskDescription
+      })
 
-  /*function afterSaving(err, task) {
-    if(err) {console.log(err); }
-    //res.redirect('/');
-    res.send('OK');
-    console.log (" in afterSaving done!!!!!");
+      console.log ("new history task added " + newTaskHistory);
+
+      newTaskHistory.save(afterSaving);
+
+      function afterSaving(err, task) {
+        if(err) {console.log(err); }
+        //res.redirect('/');
+        //res.send('OK');
+      console.log (" in afterSaving done!!!!!");
   }
-*/
+
+    }
+
+
   // find the project and remove it
   // YOU MUST send an OK response w/ res.send();
   models.task
@@ -81,7 +97,6 @@ exports.completeTask = function(req, res) {
 
     function afterRemoving(err, task) {
       if(err) { console.log(err);}
-
       res.send('OK');
     }
 }

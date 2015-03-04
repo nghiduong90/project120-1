@@ -12,11 +12,16 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	var counter = 0;
 	$('.task a').click(function(e) {
 		e.preventDefault();
-
+		counter++;
+		console.log ("counter = " + counter);
 		// get the div ID
 		var taskID = $(this).closest('.task').attr('id');
+		var taskName = $(this).closest ('.task').attr('id');
+
+		console.log ("------------------- this name on clicked = " + taskName);
 		console.log (taskID);
 		//get rid of task from the front if the id
 		var idNumber = taskID.substr('task'.length);
@@ -57,15 +62,18 @@ function initializePage() {
                     '<input type="checkbox">Completed This Task' +
                     '</label>' +
                     '</div>' +
-	                '<button class="project-delete btn btn-default" '+
+	                '<button class="project-delete btn btn-danger" '+
 						'type="button" style="float: right">delete</button> <br> <br>' + 
 	                '</div>';   
 					//'<div class="project-summary">'+project_json['summary']+'</div>'+
 
 			//var details_div = $('#task' + idNumber + '.details');
 			//details_div.html('<p> print something in html  </p>');
-			details_div.html(new_html);
-		details_div.find('.project-delete').click(function(e){
+			if ((counter % 2) == 1)
+				details_div.html(new_html);
+			else
+				details_div.html('');
+			details_div.find('.project-delete').click(function(e){
 				$.post('/task/'+idNumber+'/delete', function() {
 					window.location.href = '/';
 				});

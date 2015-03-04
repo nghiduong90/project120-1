@@ -86,9 +86,9 @@
                             <li>
                                 <a href="/task"><i class="fa fa-fw fa-bar-chart-o"></i> Add a new task</a>
                             </li>
-             <!--               <li>
+                            <li>
                                 <a href="/history"><i class="fa fa-fw fa-dashboard"></i> Your Task History</a>
-                            </li>   -->
+                            </li>  
                             <li>
                                 <a href="/exercises"><i class="fa fa-fw fa-table"></i> Reflection</a>
                             </li>
@@ -120,11 +120,12 @@
                         <h1 class="page-header">
                             Dashboard <small>View By Date</small>
                             <input class="btn btn-default" type="button"  onClick="parent.location='/task' "value="New Task" style="float: right;">
+                            <br>
                         </h1>
 
                     </div>
                 </div>
-
+                <br>
                 {{#each tasks}}
                 <div class="task"  id="task{{id}}">
                 <div class="row">
@@ -138,10 +139,10 @@
                             <div class="panel-heading">
 
                                 <div class="row">
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-6">
                                         <i class="fa fa-tasks fa-3x"></i>
                                     </div>
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-6" id="{{name}}">
                                 
                                         <h4> 
                                             {{name}}
