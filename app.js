@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
 var index = require('./routes/index');
+var intro = require('./routes/intro');
 // Example route
 // var user = require('./routes/user');
 var signinpage = require('./routes/signinpage');
@@ -24,6 +25,7 @@ var signout = require ('./routes/signout');
 var help = require ('./routes/help');
 var analysis = require ('./routes/analysis');
 var analyzed = require ('./routes/analyzed');
+var goToAnalysis = require('./routes/goToAnalysis');
 
 var task = require('./routes/task');
 var history = require('./routes/history');
@@ -66,7 +68,8 @@ if ('development' == app.get('env')) {
 //app.get('/add', add.addFriend);
 // Add routes here
 //app.get('/', signinpage.signin);
-app.get('/', index.view);
+app.get('/', intro.view);
+app.get('/index', index.view);
 app.get('/history', history.view);
 //app.get('/taskHistory/:id', taskHistory.taskHistoryInfo);
 
@@ -88,6 +91,7 @@ app.get('/signinpage', signout.signout);
 app.get('/help', help.getHelp);
 app.get('/analysis', analysis.getAnalysis);
 app.get('/analyzed', analyzed.analyze);
+app.get('/goToAnalysis', goToAnalysis.view);
 
 // Example route
 // app.get('/users', user.list);

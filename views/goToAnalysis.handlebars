@@ -9,16 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Team Chill Out</title>
+    <title>Team Chill Out | Intro HCI</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -49,7 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand"  href="/index" >Be Chilled</a>
+                <a class="navbar-brand" href="/index">Be Chilled</a>
             </div>
 
 
@@ -59,16 +57,16 @@
 
 
 
-                <li class="dropdown" style="float:right">
+
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Team Chill Out <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                  <!--      <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a>
                         </li>
-                          <li class="divider"></li> -->
+                          <li class="divider"></li>
                         <li>
-                            <a href="/signinpage"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -81,20 +79,17 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                             <li class="active">
-                                <a href="/index"><i class="fa fa-fw fa-dashboard"></i> Home</a>
+                                <a href="/"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                             </li>
                             <li>
                                 <a href="/task"><i class="fa fa-fw fa-bar-chart-o"></i> Add a new task</a>
                             </li>
                             <li>
-                                <a href="/history"><i class="fa fa-fw fa-dashboard"></i> Your Task History</a>
+                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> Exercises</a>
                             </li>
                             <li>
-                                <a href="/exercises"><i class="fa fa-fw fa-table"></i> Reflection</a>
-                            </li>
-                 <!--           <li>
                                 <a href="/analysis"><i class="fa fa-fw fa-edit"></i> Analysis</a>
-                            </li>     -->
+                            </li>
                             <li>
                                 <a href="/about"><i class="fa fa-fw fa-desktop"></i> About</a>
                             </li>
@@ -102,53 +97,33 @@
                             <li>
                                 <a href="/help"><i class="fa fa-fw fa-file"></i> Help</a>
                             </li>
-              
+                            <li>
+                                <a href="/signinpage"><i class="fa fa-fw fa-dashboard"></i> Sign Out</a>
+                            </li>                
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </nav>
 
-
-
         <div id="page-wrapper">
 
             <div class="container-fluid">
-
+                <div class>
                 <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                                History <small>View By Date</small>
-                        </h1>
-
-                    </div>
-                </div>
-
-                {{#each taskHistory}}
-                <div class="task"  id="task{{id}}">
-                <div class="row">
-                    
-                        <!--div class="panel panel-green"-->
-                        <!--div class="panel panel-yellow"-->
-                        <!--div class="panel panel-red"-->
-                       <!-- <a href="#">  -->
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><b>{{name}}</b></h3>
-                            </div>
-                            <div class="panel-body">
-                                <p><b>Complete Date: </b> {{date}}</p>
-                                <p><b>Description: </b> {{description}}</p>
-                            </div>
-                        </div>
-                  <!--  </a>   -->
+                    <h1 class="page-header">
+                            <!-- heading goes here-->
+                        <div class="alert alert-success">
+                            <h2> Congratulation For Completing This Task.</h2>
+                            <h2 style="display:inline"> Can you please click</h2>
+                            <h2 style="display:inline"><a href="/exercises"> here</a></h2>
+                            <h2 style="display:inline"> and answer some mood questions.</h2>
+                        </div>    
+                    </h1>
                 
+                <!-- main code goes here-->
 
                 </div>
-            </div>
-                {{/each}}
                 <!-- /.row -->
-
 
             </div>
             <!-- /.container-fluid -->
@@ -164,11 +139,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <script src="/js/history.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-
 
 </body>
 

@@ -101,14 +101,14 @@ function initializePage() {
 				// define action for delete
 				details_div.find('.project-delete').click(function(e){
 					$.post('/task/'+idNumber+'/delete', function() {
-					window.location.href = '/';
+					window.location.href = '/index';
 					});
 				});
 
 				// define action for delete task
 				details_div.find('.complete').click(function(e){
 					$.get('/task/'+idNumber+'/complete', function() {
-						window.location.href = '/history';
+						window.location.href = '/goToAnalysis';
 					});
 				});
 			}
@@ -135,7 +135,7 @@ function initializePage() {
 			'description': description
 		};
 		$.post('/task/new', json, function() {
-			window.location.href = '/'; // reload the page
+			window.location.href = '/index'; // reload the page
 		});
 	});
 	
