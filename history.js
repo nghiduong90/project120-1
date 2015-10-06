@@ -1,6 +1,4 @@
-
 var Mongoose = require('mongoose');
-
 
 var taskHistorySchema = new Mongoose.Schema({
   // fields are defined here
